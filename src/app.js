@@ -8,6 +8,8 @@ const forecast = require('./utils/forecast')
 
 //load the npm express library for set up server
 const express = require('express')
+// set up var for Heroku port or default port 3000
+const port = process.env.PORT || 3000
 
 //a single express function to create a new express app
 const app = express() // no argument as we can configure server using other methods
@@ -117,9 +119,9 @@ app.get('*', (req, res) =>
 // start serve up and use the following only one time in our app
 // listen to specific port (dev port but not a default)
 // 1st argu is port number and 2nd is callback function as it's asychrnonous call
-app.listen(3000, () =>
+app.listen(port, () =>
 {
-  console.log('Server is up!')
+  console.log('Server is up on port ' + port)
 })
 
 // server stay up to listen and process future request.
