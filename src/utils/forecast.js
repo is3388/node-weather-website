@@ -2,7 +2,7 @@ const request = require('request')
 
 const forecast = (longitude, latitude, callback)=>
 {
-    const url = 'http://api.weatherstack.com/current?access_key=33d3aa965e13ebd36a15ef5a34093c8d&query=' + latitude + ',' + longitude + '&units=f'
+    const url = 'http://api.weatherstack.com/current?access_key=33d3aa965e13ebd36a15ef5a34093c8d&query=' + longitude + ',' + latitude + '&units=f'
     request( { url: url, json: true}, ( error, response ) =>
 {
     if (error)

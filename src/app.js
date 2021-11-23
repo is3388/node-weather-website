@@ -85,7 +85,7 @@ app.get('/weather', (req, res) =>
             {
                 return res.send({ error})
             }
-            res.send({
+                res.send({
                 forecast: forecastData,
                 location, // location is accessible because passing from the outer function
                 address: req.query.address
