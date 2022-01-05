@@ -23,7 +23,7 @@ app.set('views', viewsPath) // skip this if you use default that Express expect
 // set up path for partials
 const partialsPath = path.join(__dirname, '../templates/partials')
 
-//set up handlebars engine and views location
+//set up handlebars engine used to create reusable webpage template just like Mustache and views location
 // in case we use express to render template not static page. We tell express which templating engine installed, pass in the engine name and the name of the module
 app.set('view engine', 'hbs')
 hbs.registerPartials(partialsPath)

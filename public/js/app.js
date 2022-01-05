@@ -6,7 +6,11 @@ const messageTwo = document.querySelector('#message-2')
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const location = search.value
+    const location = search.value // if input has a name, const location = e.target.elements.location.value
+    // if(!location)
+    //{
+       // return alert('You must enter the location!')
+    //}
     messageOne.textContent = 'Loading ...'
     // clear for existing search
     messageTwo.textContent = ''
